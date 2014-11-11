@@ -25,5 +25,9 @@ module.exports.policies = {
   
   ApiKeyController: {
       addkey: ['sessionAuth']
+  },
+  
+  AdminController: {
+      adminDesk: ['sessionAuth', 'hasFirstKey', 'isAdmin']
   }
 };

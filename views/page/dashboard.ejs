@@ -1,1 +1,5 @@
-<h1>Dashboard<h1>
+<h1>Dashboard</h1>
+<% keys.forEach(function(key) { %>
+	<p><strong>KeyID: </strong><%= key.keyId %></p>
+	<p><strong>vCode: </strong><%= key.vCode %></p>
+<% }); %>

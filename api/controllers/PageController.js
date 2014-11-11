@@ -28,15 +28,7 @@ function dashboard(req, res) {
     apiKey.checkForApiKey(req.session.identity, function(keys) {
         User.findOne({ id: req.session.identity }, function(err, user) {
            errorHandler.serverError(err, res);
-           if(user.admin === true) {
-               ApiKey.find(function(err, allKeys) {
-                  errorHandler.serverError(err, res);
-                  res.view({ keys: keys, allKeys: allKeys }); 
-               });
-           }
-           else {
-               res.view({ keys: keys });
-           }
+           res.view({ keys: keys });
         });
     });
 }
