@@ -5,7 +5,7 @@ module.exports = function(req, res, next) {
             ApiKey.findOne({ owner: user.id }, function(err, key) {
                 errorHandler.serverError(err, res);
                 if(key) {
-                    if (!key.mainCharaceter) {
+                    if (key.mainCharacter) {
 
                         return next();
                     }
