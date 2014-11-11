@@ -7,7 +7,8 @@
 
 module.exports = {
 	index: index,
-	register: register
+	register: register,
+	login: login
 };
 
 function index(req, res) {
@@ -15,6 +16,14 @@ function index(req, res) {
 }
 
 function register(req, res) {
+    res.view();
+}
+
+function login(req, res) {
+    res.view();
+}
+
+function dashboard(req, res) {
     res.view();
 }
 
