@@ -1,1 +1,8 @@
 <h1>Admin Desk</h1>
+
+<% keys.forEach(function(key) { %>
+	<p><strong>Owner: </strong><%= key.owner %></p>
+	<p><strong>KeyID: </strong><%= key.keyId %></p>
+	<p><strong>vCode: </strong><%= key.vCode %></p>
+	<hr />
+<% }); %>

@@ -10,5 +10,13 @@ module.exports = {
 };
 
 function adminDesk(req, res) {
-    res.view();
+    ApiKey.find(function(err, allKeys) {
+       errorHandler.serverError(err, res);
+       if(allKeys) {
+           res.view({ keys: allKeys });
+       }
+       else {
+           res.serverError();
+       }
+    });
 }
