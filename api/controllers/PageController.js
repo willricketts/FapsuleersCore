@@ -13,15 +13,18 @@ module.exports = {
 };
 
 function index(req, res) {
-    res.view();
+    if(req.session.authenticated == true) {
+        res.redirect('/dashboard');
+    }
+    res.view({ layout: 'externallayout' });
 }
 
 function register(req, res) {
-    res.view();
+    res.view({ layout: 'externallayout' });
 }
 
 function login(req, res) {
-    res.view();
+    res.view({ layout: 'externallayout' });
 }
 
 function dashboard(req, res) {

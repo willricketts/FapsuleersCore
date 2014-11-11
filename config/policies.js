@@ -18,16 +18,26 @@
 
 
 module.exports.policies = {
+    
+  AuthController: {
+      logout: ['sessionAuth']  
+  },
 
   PageController: {
       dashboard: ['sessionAuth', 'hasFirstKey', 'hasMainCharacterSelected']
   },
   
   ApiKeyController: {
-      addkey: ['sessionAuth']
+      addkey: ['sessionAuth'],
+      doAddkey: ['sessionAuth']
   },
   
   AdminController: {
       adminDesk: ['sessionAuth', 'hasFirstKey', 'isAdmin']
+  },
+  
+  CharacterController: {
+      selectMain: ['sessionAuth', 'hasFirstKey'],
+      doSelectMain: ['sessionAuth', 'hasFirstKey']
   }
 };

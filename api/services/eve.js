@@ -17,7 +17,7 @@ function apiCall(identity, method, callback) {
                     
                     client.fetch(method).then(function(result) {
                        callback(result, key.keyId); 
-                    });
+                    }).done();
                 }                
             });
         }
