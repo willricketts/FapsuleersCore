@@ -8,7 +8,23 @@
 module.exports = {
 
   attributes: {
-
+      
+      keyId: {
+        type: 'string',
+        required: true,
+        unique: true  
+      },
+      
+      vCode: {
+          type: 'string',
+          required: true,
+          unique: true
+      }
+      
+      owner: {
+          type: 'integer',
+          required: true
+      }
   }
 };
 
