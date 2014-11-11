@@ -20,6 +20,7 @@ function doAddKey(req, res) {
         errorHandler.serverError(err, res);
         ApiKey.create({ keyId: b.keyId, vCode: b.vCode, owner: user.id }, function(err, apikey) {
             errorHandler.serverError(err, res);
+            console.log(JSON.stringify(apikey));
             if(apiKey) {
                 req.flash('API key created!');
                 res.redirect('/dashboard');
