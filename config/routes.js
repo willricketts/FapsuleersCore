@@ -8,7 +8,8 @@ module.exports.routes = {
     'get /login': 'PageController.login',
     'get /dashboard': 'PageController.dashboard',
     
-    //AUTH CONTROLLER -GET
+    //AUTH CONTROLLER - GET
+    'get /logout': 'AuthController.logout',
     
     //AUTH CONTROLLER - POST
     'post /register': 'AuthController.register',

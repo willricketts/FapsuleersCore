@@ -7,7 +7,8 @@
 
 module.exports = {
 	register: register,
-	login: login
+	login: login,
+	logout: logout
 };
 
 var bcrypt = require('bcrypt');
@@ -56,3 +57,8 @@ function login(req, res) {
     });
 }
 
+function logout(req, res) {
+    req.session.authenticated = false;
+    req.flash('Successfully logged out.');
+    res.redirect('/');
+}
