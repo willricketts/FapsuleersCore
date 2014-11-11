@@ -17,7 +17,17 @@ function register(req, res) {
     User.findOne({ email: b.email }, function(err, user) {
        if(err) { res.send(500); }
        if(!user) {
-           
+           auth.hashPassword(b.password, function(err, hash) {
+              User.create({ email: email, password: hash }, function(err, user) {
+                  errorHandler.serverError(err, res);
+                  if(user) {
+                      res.redirect('/dashboard');
+                  }
+                  else {
+                      res.redirect('/');
+                  }
+              });
+           });
        }
     });
 }

@@ -23,8 +23,12 @@ module.exports = {
     mainCharacter: {
         type: 'string',
         unique: true
+    },
+    
+    admin: {
+        type: 'boolean',
+        defaultsTo: false
     }
-
   }
 };
 
