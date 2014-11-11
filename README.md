@@ -1,3 +1,3 @@
-# core
+# Fapsuleers-Core
 
-a [Sails](http://sailsjs.org) application
+Dedicated auth system for Fapsuleers
