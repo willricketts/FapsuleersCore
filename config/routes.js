@@ -22,5 +22,8 @@ module.exports.routes = {
     'post /addkey': 'ApiKeyController.doAddKey',
     
     //ADMINCONTROLLER - GET
-    'get /admin': 'AdminController.adminDesk'
+    'get /admin': 'AdminController.adminDesk',
+    
+    //CHARACTERCONTROLLER - GET
+    'get /selectmain': 'CharacterController.selectMainCharacter'
 };

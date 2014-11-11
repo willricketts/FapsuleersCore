@@ -20,7 +20,7 @@
 module.exports.policies = {
 
   PageController: {
-      dashboard: ['sessionAuth', 'hasFirstKey']
+      dashboard: ['sessionAuth', 'hasFirstKey', 'hasMainCharacterSelected']
   },
   
   ApiKeyController: {
