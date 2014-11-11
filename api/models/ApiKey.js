@@ -18,14 +18,19 @@ module.exports = {
       },
       
       vCode: {
-          type: 'string',
-          required: true,
-          unique: true
+        type: 'string',
+        required: true,
+        unique: true
+      },
+      
+      mainCharacter: {
+        type: 'string',
+        unique: true
       },
       
       owner: {
-          type: 'integer',
-          required: true
+        type: 'integer',
+        required: true
       }
   }
 };
