@@ -6,6 +6,17 @@
  */
 
 module.exports = {
-	
+	register: register,
+	login: login
 };
+
+var bcrypt = require('bcrypt');
+
+function register(req, res) {
+    
+}
+
+function login(req, res) {
+    
+}
 
