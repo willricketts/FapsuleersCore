@@ -17,7 +17,6 @@ function addKey(req, res) {
 function doAddKey(req, res) {
     var b = req.body;
     User.findOne({ id: req.session.identity }, function(err, user) {
-        console.log(JSON.stringify(user));
         errorHandler.serverError(err, res);
         ApiKey.findOne({ keyId: b.keyId, vCode: b.vCode }, function(err, key) {
             if(!key) {
