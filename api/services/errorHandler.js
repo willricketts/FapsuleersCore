@@ -5,9 +5,7 @@ module.exports = {
 };
 
 function serverError(err, res) {
-    
-}
-
-function nullCollection(collection, res) {
-    
+    if(err) {
+        res.send(500, 'Lost in space!');
+    }
 }
