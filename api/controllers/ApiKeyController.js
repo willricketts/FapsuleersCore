@@ -6,6 +6,15 @@
  */
 
 module.exports = {
-	
+	addKey: addKey,
+	doAddKey: doAddKey
 };
+
+function addKey(req, res) {
+    res.view();
+}
+
+function doAddKey(req, res) {
+    
+}
 

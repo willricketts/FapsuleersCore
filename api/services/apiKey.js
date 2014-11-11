@@ -4,7 +4,9 @@ module.exports = {
 
 function checkForApiKey(userId, callback) {
     ApiKey.find({ owner: userId }, function(err, keys) {
-       errorHandler.serverError(err, res);
+       if(err) {
+           return res.serverError('Something broke! Go bitch at El Marrow.');
+       }
        callback(keys); 
     });
 }

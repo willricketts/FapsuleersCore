@@ -22,6 +22,7 @@ function register(req, res) {
               User.create({ email: b.email, password: hash }, function(err, user) {
                   errorHandler.serverError(err, res);
                   if(user) {
+                      req.session.identity = user.email;
                       req.session.authenticated = true;
                       res.redirect('/dashboard');
                   }
@@ -41,6 +42,7 @@ function login(req, res) {
         if(user) {
             auth.checkPassword(b.password, user.password, function(err, result) {
                if(result == true) {
+                   req.session.identity = user.email;
                    req.session.authenticated = true;
                    res.redirect('dashboard');
                }

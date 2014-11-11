@@ -25,6 +25,9 @@ function login(req, res) {
 }
 
 function dashboard(req, res) {
-    res.view();
+    apiKey.checkForApiKey(req.session.identity, function(keys) {
+        console.log(JSON.stringify(keys));
+        res.view();
+    });
 }
 
