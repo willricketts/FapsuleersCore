@@ -25,7 +25,6 @@ function login(req, res) {
 }
 
 function dashboard(req, res) {
-    console.log(req.session);
     res.view();
 }
 
