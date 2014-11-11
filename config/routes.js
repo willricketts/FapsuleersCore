@@ -18,12 +18,15 @@ module.exports.routes = {
     //APIKEY CONTROLLER - GET
     'get /addkey': "ApiKeyController.addKey",
     
-    //APIKEYCONTROLLER - POST
+    //APIKEY CONTROLLER - POST
     'post /addkey': 'ApiKeyController.doAddKey',
     
-    //ADMINCONTROLLER - GET
+    //ADMIN CONTROLLER - GET
     'get /admin': 'AdminController.adminDesk',
     
-    //CHARACTERCONTROLLER - GET
-    'get /selectmain': 'CharacterController.selectMainCharacter'
+    //CHARACTER CONTROLLER - GET
+    'get /selectmain': 'CharacterController.selectMainCharacter',
+    
+    //CHARACTER CONTROLLER
+    'post /selectmain': 'CharacterController.doSelectMainCharacter'
 };

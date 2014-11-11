@@ -1,5 +1,8 @@
 <h1>Select Main Character</h1>
 
-<% for(characterID in response.characters) { %>
-	<p><%= response.characters[characterID].name %></p>
-<% } %>
+<form action="/selectmain?keyId=<%= keyId %>" method="post">
+	<% for(characterID in response.characters) { %>
+		<input type="radio" name="mainCharacter" value="<%= response.characters[characterID].name %>"><%= response.characters[characterID].name %><br />
+	<% } %>
+	<input type="submit" class="btn btn-primary">
+</form>

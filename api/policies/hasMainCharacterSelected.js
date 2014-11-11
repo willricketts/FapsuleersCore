@@ -5,10 +5,12 @@ module.exports = function(req, res, next) {
             ApiKey.findOne({ owner: user.id }, function(err, key) {
                 errorHandler.serverError(err, res);
                 if(key) {
-                    if (key.mainCharaceter !== undefined) {
+                    if (!key.mainCharaceter) {
+
                         return next();
                     }
                     else {
+                        console.log(key.mainCharacter);
                         req.flash('Main character not selected!');
                         res.redirect('/selectmain');
                     }
