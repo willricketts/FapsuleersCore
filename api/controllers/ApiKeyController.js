@@ -15,6 +15,6 @@ function addKey(req, res) {
 }
 
 function doAddKey(req, res) {
-    
+    var b = req.body;
 }
 

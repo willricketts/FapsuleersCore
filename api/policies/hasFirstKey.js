@@ -6,6 +6,9 @@ module.exports = function(req, res, next) {
            if (keys == []) {
                res.redirect('/addkey');
            }
+           else {
+               return next();
+           }
        });
     });
 }
