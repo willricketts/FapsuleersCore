@@ -13,5 +13,8 @@ module.exports.routes = {
     
     //AUTH CONTROLLER - POST
     'post /register': 'AuthController.register',
-    'post /login': 'AuthController.login'
+    'post /login': 'AuthController.login',
+    
+    //APIKEY CONTROLLER - GET
+    'get /addkey': "ApiKeyController.addkey"
 };
