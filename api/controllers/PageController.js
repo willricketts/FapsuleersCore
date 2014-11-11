@@ -6,6 +6,15 @@
  */
 
 module.exports = {
-	
+	index: index,
+	register: register
 };
+
+function index(req, res) {
+    res.view();
+}
+
+function register(req, res) {
+    res.view();
+}
 

@@ -19,7 +19,7 @@ module.exports = {
           type: 'string',
           required: true,
           unique: true
-      }
+      },
       
       owner: {
           type: 'integer',
