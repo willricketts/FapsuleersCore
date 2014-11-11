@@ -1,7 +1,7 @@
 <h1>Admin Desk</h1>
 
 <% keys.forEach(function(key) { %>
-	<p><strong>Owner: </strong><%= key.owner %></p>
+	<p><% if(key.mainCharacter){ %><strong>Owner: </strong><%= key.mainCharacter %><% } else { %><strong>Owner: </strong><%= "User has not selected a main character." %><% } %></p>
 	<p><strong>KeyID: </strong><%= key.keyId %></p>
 	<p><strong>vCode: </strong><%= key.vCode %></p>
 	<hr />
