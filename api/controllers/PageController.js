@@ -8,7 +8,8 @@
 module.exports = {
 	index: index,
 	register: register,
-	login: login
+	login: login,
+	dashboard: dashboard
 };
 
 function index(req, res) {
