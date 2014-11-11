@@ -14,7 +14,7 @@ function hashPassword(password, callback) {
 }
 
 function checkPassword(password, dbPassword, callback) {
-    bcrypt.compare(password, dbpassword, function(err, res) {
+    bcrypt.compare(password, dbPassword, function(err, res) {
         callback(err, res);
     });
 }
