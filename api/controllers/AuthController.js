@@ -18,7 +18,7 @@ function register(req, res) {
        if(err) { res.send(500); }
        if(!user) {
            auth.hashPassword(b.password, function(err, hash) {
-              User.create({ email: email, password: hash }, function(err, user) {
+              User.create({ email: b.email, password: hash }, function(err, user) {
                   errorHandler.serverError(err, res);
                   if(user) {
                       res.redirect('/dashboard');
@@ -33,6 +33,24 @@ function register(req, res) {
 }
 
 function login(req, res) {
-    
+    var b = req.body;
+    User.findOne({ email: b.email }, function(err, user) {
+        errorHandler.serverError(err, res);
+        if(user) {
+            auth.checkPassword(b.password, user.password, function(err, result) {
+               if(result == true) {
+                   res.redirect('dashboard');
+               }
+               else {
+                   req.flash('Incorrect Password')
+                   res.redirect('/login');
+               }
+            });
+        }
+        else {
+            req.flash('Incorrect email address');
+            res.redirect('/login');
+        }
+    });
 }
 

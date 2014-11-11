@@ -1,7 +1,6 @@
 module.exports = {
     
-  serverError: serverError,
-  nullCollection: nullCollection    
+  serverError: serverError   
 };
 
 function serverError(err, res) {
