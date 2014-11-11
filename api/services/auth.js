@@ -8,11 +8,13 @@ var bcrypt = require('bcrypt');
 function hashPassword(password, callback) {
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(password, salt, function(err, hash) {
-            callback(hash);
+            callback(err, hash);
         });
     });
 }
 
-function checkPassword(email, password, callback) {
-    
+function checkPassword(password, dbPassword, callback) {
+    bcrypt.compare(password, dbpassword, function(err, res) {
+        callback(err, res);
+    });
 }
