@@ -1,5 +1,5 @@
 <h1>Select Main Character</h1>
 
-<% output.characters.forEach(function(character) { %>
-	<p><%= character.name %></p>
-<% }); %>
+<% for(characterID in response.characters) { %>
+	<p><%= response.characters[characterID].name %></p>
+<% } %>

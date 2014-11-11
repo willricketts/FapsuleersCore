@@ -12,9 +12,8 @@ module.exports = {
 function selectMainCharacter(req, res) {
     eve.apiCall(req.session.identity, 'account:Characters', function(response) {
         console.log('EVE API CALL TIME!!!');
-        var output = JSON.parse(response);
-        console.log(output);
-        res.view({ output: output });
+        console.log(response);
+        res.view({ response: response });
     });
 }
 
