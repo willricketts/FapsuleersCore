@@ -11,5 +11,6 @@ module.exports.routes = {
     //AUTH CONTROLLER -GET
     
     //AUTH CONTROLLER - POST
-    'post /register': 'AuthController.register'
+    'post /register': 'AuthController.register',
+    'post /login': 'AuthController.login'
 };
