@@ -9,7 +9,11 @@ module.exports = {
 
   adapter: 'mongo',
   attributes: {
-    
+    creator: {
+      type: 'string',
+      required: true
+    },
+
     ancientCoordinates: {
       type: 'integer'
     },
