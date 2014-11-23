@@ -15,6 +15,11 @@ module.exports = {
       required: true
     },
 
+    wingId: {
+      type: 'string',
+      required: true
+    },
+
     ancientCoordinates: {
       type: 'integer'
     },
@@ -33,6 +38,14 @@ module.exports = {
 
     sleeperDroneAi: {
       type: 'integer'
-    }
-  };
+    },
 
+    iskTotal: {
+      type: 'integer'
+    },
+
+    notes: {
+      type: 'text'
+    }
+  }
+};
