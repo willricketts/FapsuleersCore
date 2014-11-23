@@ -28,5 +28,8 @@ module.exports.routes = {
     'get /selectmain': 'CharacterController.selectMainCharacter',
     
     //CHARACTER CONTROLLER
-    'post /selectmain': 'CharacterController.doSelectMainCharacter'
+    'post /selectmain': 'CharacterController.doSelectMainCharacter',
+
+    //PAYOUT CONTROLLER - GET
+    'post /payout/create': 'PayoutController.create'
 };

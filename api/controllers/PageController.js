@@ -36,3 +36,6 @@ function dashboard(req, res) {
     });
 }
 
+function createPayout(req, res) {
+    res.view();
+}
