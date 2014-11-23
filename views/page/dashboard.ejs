@@ -1,5 +1,6 @@
 <h1>Dashboard</h1>
 <% keys.forEach(function(key) { %>
+	<h3><%= key.owner %></h3>
 	<p><strong>KeyID: </strong><%= key.keyId %></p>
-	<p><strong>vCode: </strong><%= key.vCode %></p>
+	<p><strong>vCode: </strong><%= key.vCode %></p><hr>
 <% }); %>
