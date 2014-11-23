@@ -8,6 +8,7 @@
 module.exports = {
 
   adapter: 'mongo',
+  
   attributes: {
     creator: {
       type: 'string',
