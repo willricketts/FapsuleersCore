@@ -31,7 +31,7 @@ function dashboard(req, res) {
     apiKey.checkForApiKey(req.session.identity, function(keys) {
         User.findOne({ id: req.session.identity }, function(err, user) {
            errorHandler.serverError(err, res);
-           res.view({ keys: keys });
+           res.view({ keys: keys, user: user });
         });
     });
 }
