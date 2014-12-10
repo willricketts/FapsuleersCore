@@ -23,6 +23,10 @@ module.exports.routes = {
     
     //ADMIN CONTROLLER - GET
     'get /admin': 'AdminController.adminDesk',
+    'get /setleaders': 'AdminController.setLeaders',
+
+    //ADMIN CONTROLLER - POST
+    'post /setleaders': 'AdminController.doSetLeaders',
     
     //CHARACTER CONTROLLER - GET
     'get /selectmain': 'CharacterController.selectMainCharacter',

@@ -6,7 +6,9 @@
  */
 
 module.exports = {
-	adminDesk: adminDesk
+	adminDesk: adminDesk,
+  setLeaders: setLeaders,
+  doSetLeaders: doSetLeaders
 };
 
 function adminDesk(req, res) {
@@ -19,4 +21,12 @@ function adminDesk(req, res) {
            res.serverError();
        }
     });
+}
+
+function setLeaders(req, res) {
+  res.view();
+}
+
+function doSetLeaders(req, res) {
+  var b = req.body;
 }
