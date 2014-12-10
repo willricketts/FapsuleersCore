@@ -12,24 +12,28 @@ module.exports = {
   attributes: {
 
     email: {
-        type: 'email',
-        required: true,
-        unique: true
+      type: 'email',
+      required: true,
+      unique: true
     },
     
     password: {
-        type: 'string',
-        required: true,
+      type: 'string',
+      required: true,
     },
     
     mainCharacter: {
-        type: 'string',
-        unique: true
+      type: 'string',
+      unique: true
     },
     
     admin: {
-        type: 'boolean',
-        defaultsTo: false
+      type: 'boolean',
+      defaultsTo: false
+    },
+
+    squadLeader: {
+      type: 'string'
     }
   }
 };

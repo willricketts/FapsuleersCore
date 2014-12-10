@@ -8,11 +8,11 @@ module.exports = {
 }
 
 function index(req,res) {
-    res.view();
+  res.view();
 }
 
 function show(req, res) {
-
+  
 }
 
 function create(req, res) {
